@@ -135,15 +135,13 @@ cd electron-pepper && npm start
 vim content/www.poptropica.com/framework.swf
 vim electron-pepper/src/main.js
 
-# 2. Update version in package.json
-cd electron-pepper
-# Edit: "version": "0.1.0" -> "0.1.1"
+# 2. Create patch update (includes only changed files)
+./release-patch.sh 0.1.1 --base 0.1.0
 
-# 3. Create update package
-cd ..
-node create-update-package.js 0.1.1
+# Important: Always specify --base to include all changes since last release
 
-# 4. Distribute (GitHub Releases or your server)
+# 3. Distribute (GitHub Releases or your server)
+# Upload: updates/poptropica-patch-0.1.1.zip
 ```
 
 ## Contributing

@@ -66,10 +66,12 @@ vim electron-pepper/src/main.js
 ### 2. Create a Patch
 
 ```bash
-./release-patch.sh 0.1.1
+./release-patch.sh 0.1.1 --base 0.1.0
 ```
 
 This creates: `updates/poptropica-patch-0.1.1.zip`
+
+**Important:** Always specify `--base <previous-version>` to ensure the patch includes ALL changes since the last release, not just uncommitted changes.
 
 ### 3. Create GitHub Release
 

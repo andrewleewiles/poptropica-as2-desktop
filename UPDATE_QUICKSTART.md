@@ -4,28 +4,52 @@ Get your update system running in 5 minutes.
 
 ## For Developers: Creating Updates
 
-### 1. Make your changes
+You have two options: **Patch Updates** (recommended, smaller) or **Full Updates** (larger, everything).
+
+### Option A: Patch Update (Recommended)
+
+**Creates a ZIP with ONLY changed files** - much smaller and faster!
+
+#### 1. Make your changes
 
 Edit any files in:
 - `content/` directory
 - `electron-pepper/src/*.js`
 - `electron-pepper/src/renderer/*.html`
 
-### 2. Bump version in package.json
+#### 2. Create patch (automated script)
+
+```bash
+./release-patch.sh 0.1.1 --base 0.1.0
+```
+
+**Important:** Always specify `--base <previous-version>` to include ALL changes since the last release.
+
+This creates: `updates/poptropica-patch-0.1.1.zip` (typically 5-50 MB)
+
+### Option B: Full Update
+
+**Creates a ZIP with ALL game files** - larger but includes everything.
+
+#### 1. Make your changes
+
+Same as above.
+
+#### 2. Bump version in package.json
 
 ```bash
 cd electron-pepper
 # Edit package.json: "version": "0.1.0" -> "0.1.1"
 ```
 
-### 3. Create update package
+#### 3. Create full update package
 
 ```bash
 cd ..
 node create-update-package.js 0.1.1
 ```
 
-This creates `updates/poptropica-update-0.1.1.zip`
+This creates: `updates/poptropica-update-0.1.1.zip` (typically 500+ MB)
 
 ### 4. Upload to your server
 

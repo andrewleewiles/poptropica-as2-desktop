@@ -181,10 +181,11 @@ User profiles and preferences are preserved!
 vim content/www.poptropica.com/framework.swf
 vim electron-pepper/src/main.js
 
-# Create patch
-./release-patch.sh 0.1.1
+# Create patch (always specify the base version!)
+./release-patch.sh 0.1.1 --base 0.1.0
 
 # This creates: updates/poptropica-patch-0.1.1.zip
+# Contains ALL changes since v0.1.0
 ```
 
 ### 2. Set Up Local Test Server
