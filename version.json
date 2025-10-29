@@ -1,0 +1,11 @@
+{
+  "version": "0.1.0",
+  "releaseDate": "2025-10-29",
+  "releaseNotes": "Initial release of Poptropica AS2 Desktop",
+  "changelog": [
+    "Initial desktop version with Electron + PepperFlash",
+    "Profile management system",
+    "Custom scene switching",
+    "Advanced sound system with volume controls"
+  ]
+}

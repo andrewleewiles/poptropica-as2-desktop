@@ -1,0 +1,115 @@
+# ============================================
+# POPTROPICA AS2 DESKTOP - MINIMAL GIT REPO
+# ============================================
+# This repo only tracks code and core game files.
+# Large assets are distributed separately.
+
+# Node modules
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# Build outputs
+dist/
+out/
+build/
+*.app
+*.dmg
+*.exe
+*.deb
+*.rpm
+*.AppImage
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.log
+*.pid
+
+# User game data
+content/www.poptropica.com/profiles/*.json
+content/www.poptropica.com/userPrefs.json
+
+# Backup files
+*.backup
+*.bak
+*.old
+*_backup.*
+
+# Export directories
+exports/
+/tmp/
+
+# ============================================
+# LARGE ASSETS (Distributed Separately)
+# ============================================
+
+# Development dependencies (625MB)
+temurin-21.jdk/
+apache-royale-0.9.12-bin-js-swf.tar.gz
+
+# Sound files (2GB) - Users download full pack once
+content/www.poptropica.com/sound/
+
+# Scene SWFs (238MB) - Rarely change
+content/www.poptropica.com/scenes/
+
+# Popup SWFs (42MB) - Rarely change
+content/www.poptropica.com/popups/
+
+# Avatar studio assets
+content/www.poptropica.com/avatarstudio/
+content/www.poptropica.com/avatarstudioDev/
+content/www.poptropica.com/avatarParts/
+
+# External assets
+content/www.poptropica.com/externalAssets/
+
+# Comics and blog content
+content/blog.poptropica.com/
+comics-main/
+
+# Flashpoint archives
+flashpoint-content/
+original-content/
+AS3sound/
+
+# Brain assets
+content/www.poptropica.com/brain/
+
+# AMFPHP backend
+content/www.poptropica.com/AMFPHP/
+
+# Font files
+content/www.poptropica.com/fonts/
+electron-pepper/src/renderer/fonts/
+
+# ============================================
+# WHAT IS TRACKED (Small, Frequently Updated)
+# ============================================
+# - Core SWF files (framework.swf, gameplay.swf, char.swf)
+# - Electron application code
+# - Documentation files
+# - Configuration files
+# - Update scripts
